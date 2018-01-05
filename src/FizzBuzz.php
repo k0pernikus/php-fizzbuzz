@@ -13,6 +13,21 @@ class FizzBuzz
      */
     public function fizzBuzz(int $n): String
     {
-        return "";
+        $isFizz = $n % 3 === 0;
+        $isBuzz = $n % 5 === 0;
+
+        if ($isFizz && !$isBuzz) {
+            return "Fizz";
+        }
+
+        if (!$isFizz && $isBuzz) {
+            return "Buzz";
+        }
+
+        if ($isFizz && $isBuzz) {
+            return "FizzBuzz";
+        }
+
+        return (string)$n;
     }
 }

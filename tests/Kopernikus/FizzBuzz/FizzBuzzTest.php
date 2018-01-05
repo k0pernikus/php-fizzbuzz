@@ -13,8 +13,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider fizzBuzzProvider
+     * @param int $input
+     * @param string $expected
      */
-    public function testFizzBuzz(int $input, string $expected): void
+    public function testFizzBuzz(int $input, string $expected)
     {
         $fizzBuzz = new FizzBuzz();
         $actual = $fizzBuzz->fizzBuzz($input);
