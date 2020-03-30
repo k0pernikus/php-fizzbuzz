@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: philipp
- * Date: 05.01.18
- * Time: 10:24
- */
 
 namespace Kopernikus\FizzBuzz;
 
+use PHPUnit\Framework\TestCase;
 
-class FizzBuzzTest extends \PHPUnit_Framework_TestCase
+class FizzBuzzTest extends TestCase
 {
     /**
      * @dataProvider fizzBuzzProvider
@@ -23,7 +18,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual, "The input ${input} should be converted to the proper string ${expected}");
     }
 
-    public function fizzBuzzProvider()
+    public function fizzBuzzProvider(): array
     {
         return [
             [2, '2'],
